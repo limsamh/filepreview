@@ -1,5 +1,5 @@
 {
-  "name": "filepreview",
+  "name": "filepreview-sp",
   "version": "1.0.12",
   "description": "A file preview generator for node.js",
   "main": "filepreview.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maxlabelle/filepreview.git"
+    "url": "git+https://github.com/spawnrider/filepreview.git"
   },
   "keywords": [
     "video",
@@ -20,10 +20,10 @@
     "visual",
     "document"
   ],
-  "author": "Maxime Labelle <Maxime.Labelle@owasp.org> (https://github.com/maxlabelle/filepreview)",
+  "author": "Yohann Ciurlik <spawnrider@gmail.com> (https://github.com/spawnrider/filepreview)",
   "license": "BSD-4-Clause",
   "bugs": {
-    "url": "https://github.com/maxlabelle/filepreview/issues"
+    "url": "https://github.com/spawnrider/filepreview/issues"
   },
-  "homepage": "https://github.com/maxlabelle/filepreview#readme"
+  "homepage": "https://github.com/spawnrider/filepreview#readme"
 }
