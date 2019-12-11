@@ -78,6 +78,9 @@ module.exports = {
           var convertArgs = [input + '[0]', output];
           if (options.width > 0 && options.height > 0) {
             convertArgs.splice(0, 0, '-resize', options.width + 'x' + options.height);
+            convertArgs.unshift("-quality", "50");
+            convertArgs.unshift("-background", "white");
+            convertArgs.unshift("-alpha", "remove");
           }
           child_process.execFile('convert', convertArgs, function(error) {
             if (error) return callback(error);
@@ -97,10 +100,10 @@ module.exports = {
             var convertOtherArgs = [tempPDF + '[0]', output];
             if (options.width > 0 && options.height > 0) {
               convertOtherArgs.splice(0, 0, '-resize', options.width + 'x' + options.height);
+              convertOtherArgs.unshift("-quality", "50");
+              convertOtherArgs.unshift("-background", "white");
+              convertOtherArgs.unshift("-alpha", "remove");
             }
-            convertOtherArgs.unshift("-quality", "50");
-            convertOtherArgs.unshift("-background", "white");
-            convertOtherArgs.unshift("-alpha", "remove");
             child_process.execFile('convert', convertOtherArgs, function(error) {
               if (error) return callback(error);
               fs.unlink(tempPDF, function(error) {
