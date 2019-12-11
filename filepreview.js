@@ -98,6 +98,9 @@ module.exports = {
             if (options.width > 0 && options.height > 0) {
               convertOtherArgs.splice(0, 0, '-resize', options.width + 'x' + options.height);
             }
+            convertOtherArgs.unshift("-quality", "50");
+            convertOtherArgs.unshift("-background", "white");
+            convertOtherArgs.unshift("-alpha", "remove");
             child_process.execFile('convert', convertOtherArgs, function(error) {
               if (error) return callback(error);
               fs.unlink(tempPDF, function(error) {

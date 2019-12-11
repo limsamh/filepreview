@@ -27,6 +27,12 @@ filepreview depends on 'ImageMagick':
   $ apt-get install imagemagick
 ```
 
+Also install Ghostscript
+
+```
+  $ apt-get install ghostscript
+``` 
+
 To install use npm:
 
 ```
